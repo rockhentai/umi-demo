@@ -34,10 +34,10 @@ npm run lint
 
 + 更新版本号
 
-根据实际版本情况选择更新patch/minor/major版本，以patch示例
+根据实际版本情况选择更新patch/minor/major版本，以minor示例
 
 ```bash
-npm version patch -m '特性版本更新'
+npm version minor -m '特性版本更新'
 ```
 
 + 配置阿里云oss
