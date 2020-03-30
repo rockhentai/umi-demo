@@ -1,8 +1,11 @@
 {
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
+    "build:oss": "UMI_ENV=oss umi build",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "test": "umi test",
     "lint": "eslint {src,mock,tests}/**/*.{js,jsx} --fix",
     "precommit": "lint-staged"
@@ -20,6 +23,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
+    "cz-conventional-changelog": "^3.1.0",
     "eslint": "^5.4.0",
     "eslint-config-umi": "^1.4.0",
     "eslint-plugin-flowtype": "^2.50.0",
@@ -30,6 +34,7 @@
     "lint-staged": "^7.2.2",
     "react-test-renderer": "^16.7.0",
     "umi": "^2.7.7",
+    "umi-plugin-oss": "^1.2.0",
     "umi-plugin-react": "^1.8.4"
   },
   "lint-staged": {
@@ -40,5 +45,10 @@
   },
   "engines": {
     "node": ">=8.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
