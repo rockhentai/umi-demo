@@ -24,6 +24,15 @@ npm start
 npm run build
 ```
 
+导出多页面
+
+```javascript
+// config.js
+exportStatic: {
+  htmlSuffix: true,
+},
+```
+
 ### Check code style
 
 ```bash
@@ -159,3 +168,4 @@ npm version patch -m "xxx"
 
 执行完这条命令后，可以看到CHANGELOG.md已经被修改了
 
+![change log](https://lilithimage.oss-cn-shanghai.aliyuncs.com/system/git/change_log.png)
